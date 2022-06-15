@@ -1,9 +1,12 @@
 import { useRef, useState } from "react"
 
 import { useAdicionarParticipantes } from '../../state/hook/useAdicionarParticipantes'
+import { useMensagemDeErro } from '../../state/hook/useMensagemDeErro'
+
 
 const Formulario = () => {
     const adicionarParticipantes = useAdicionarParticipantes()
+    const mensagemDeErro = useMensagemDeErro()
 
     const [nome, setNome] = useState('')
 
@@ -29,6 +32,7 @@ const Formulario = () => {
             <button disabled={!nome}>
                 Adicionar
             </button>
+            {mensagemDeErro && <p role="alert">{mensagemDeErro}</p>}
         </form>
     )
 }
