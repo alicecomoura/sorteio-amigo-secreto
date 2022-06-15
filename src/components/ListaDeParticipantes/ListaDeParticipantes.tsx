@@ -1,6 +1,6 @@
 import { useListaDeParticipantes } from '../../state/hook/useListaDeParticipantes'
 
-export const ListaDeParticipantes = () => {
+const ListaDeParticipantes = () => {
     const participantes: string[] = useListaDeParticipantes()
 
     return (
@@ -9,3 +9,5 @@ export const ListaDeParticipantes = () => {
         </ul>
     )
 }
+
+export default ListaDeParticipantes
