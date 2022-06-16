@@ -45,7 +45,7 @@ describe('na pagina do sorteio', () => {
 
         const opcoes = screen.queryAllByRole('option')
 
-        expect(opcoes).toHaveLength(participantes.length)
+        expect(opcoes).toHaveLength(participantes.length + 1) // pq ja vem uma option por default
     })
 
     test('o amigo secreto é exibido quando solicitado', () => {
