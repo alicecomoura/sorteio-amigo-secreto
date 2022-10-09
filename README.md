@@ -10,6 +10,7 @@ Aplicação construída com base em TDD (Test Driven Development), com o intuito
 
 - `React`
 - `React Hooks` 
+- `Typescript`
 - `Gerenciamento de estados com Recoil`
 - `TDD com React Testing Library`
 
