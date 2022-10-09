@@ -1,0 +1,24 @@
+footer {
+  margin-top: 2rem;
+
+  text-align: center;
+}
+
+footer button {
+  padding: 1rem 2rem;
+
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+
+  background-color: hsl(278, 100%, 34%);
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+footer button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}

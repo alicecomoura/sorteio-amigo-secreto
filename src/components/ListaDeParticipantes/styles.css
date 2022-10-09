@@ -1,0 +1,20 @@
+.list {
+  max-width: 400px;
+  width: 90%;
+  padding: 1rem;
+  margin: 0 auto;
+  background: #e8e8e8;
+  color: #333333;
+
+  list-style: none;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list li {
+  padding: 1rem;
+  background: #f6f6f6;
+}

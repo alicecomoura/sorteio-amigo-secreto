@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useListaDeParticipantes } from '../../state/hook/useListaDeParticipantes'
 import { useResultadoDoSorteio } from '../../state/hook/useResultadoDoSorteio'
 
+import './styles.css'
+
 const Sorteio = () => {
     const participantes = useListaDeParticipantes()
 
@@ -19,8 +21,10 @@ const Sorteio = () => {
     }
 
     return (
-        <section>
+        <section className="sorteio__box">
+            <h1>Selecione um nome para sortear</h1>
             <form onSubmit={sortear}>
+                <h2>O participante da vez:</h2>
                 <select 
                     required
                     name='participantesAtual'
@@ -30,7 +34,7 @@ const Sorteio = () => {
                     onChange={(evento) => setParticipanteDaVez(evento.target.value)}
                 >
                     <option>
-                        Selecione seu nome
+                        Selecione um nome
                     </option>
                     {participantes.map(participante => <option key={participante}>{participante}</option>)}
 
@@ -39,7 +43,7 @@ const Sorteio = () => {
                     Sortear
                 </button>
             </form>
-            {amigoSecreto && <p role='alert'>{amigoSecreto}</p>}
+            {amigoSecreto && <p role='alert'>tirou <span>{amigoSecreto}</span></p>}
         </section>
     )
 }
